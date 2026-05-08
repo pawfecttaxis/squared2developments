@@ -1,820 +1,693 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Squared2 Developments</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:'Montserrat',sans-serif;
-background:#fff;
-color:#111;
-overflow-x:hidden;
-}
-
-/* ---------------- HEADER ---------------- */
-
-.hero{
-height:100vh;
-min-height:850px;
-background:
-linear-gradient(to right, rgba(0,0,0,.95) 0%, rgba(0,0,0,.88) 35%, rgba(0,0,0,.15) 65%),
-url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2070&auto=format&fit=crop') center center/cover no-repeat;
-position:relative;
-color:white;
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:30px 60px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo-wrap{
-display:flex;
-align-items:center;
-gap:20px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #111;
 }
 
-.logo-box{
-width:110px;
-height:110px;
-border:4px solid white;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:52px;
-font-weight:900;
-letter-spacing:-4px;
+.hero {
+  min-height: 720px;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.9) 36%, rgba(0,0,0,0.25) 65%),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=90");
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-.logo-box span{
-color:#f15a24;
-font-size:42px;
-position:relative;
-top:-8px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 36px;
 }
 
-.brand-text h1{
-font-size:38px;
-font-weight:800;
-letter-spacing:6px;
-line-height:1;
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
-.brand-text h2{
-font-size:22px;
-font-weight:500;
-letter-spacing:8px;
-margin-top:6px;
+.logo {
+  width: 115px;
+  height: 105px;
+  border: 4px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: -5px;
 }
 
-.brand-text p{
-color:#f15a24;
-font-weight:700;
-font-size:14px;
-letter-spacing:2px;
-margin-top:10px;
+.logo span {
+  color: #f15a24;
+  font-size: 42px;
+  position: relative;
+  top: -8px;
 }
 
-.nav-links{
-display:flex;
-gap:40px;
-align-items:center;
+.brand h1 {
+  font-size: 38px;
+  letter-spacing: 7px;
+  font-weight: 900;
 }
 
-.nav-links a{
-text-decoration:none;
-color:white;
-font-weight:700;
-font-size:14px;
-text-transform:uppercase;
-position:relative;
+.brand h2 {
+  font-size: 22px;
+  letter-spacing: 8px;
+  font-weight: 400;
 }
 
-.nav-links a.active::after{
-content:'';
-position:absolute;
-bottom:-10px;
-left:0;
-width:100%;
-height:4px;
-background:#f15a24;
+.brand p {
+  color: #f15a24;
+  font-weight: 900;
+  margin-top: 8px;
 }
 
-.quote-btn{
-border:2px solid #f15a24;
-padding:14px 24px;
-transition:.3s;
+.nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
-.quote-btn:hover{
-background:#f15a24;
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
-/* ---------------- HERO TEXT ---------------- */
-
-.hero-content{
-position:absolute;
-left:60px;
-top:50%;
-transform:translateY(-45%);
-max-width:650px;
-}
-
-.hero-content h3{
-font-size:82px;
-line-height:0.95;
-font-weight:900;
-text-transform:uppercase;
-margin-bottom:25px;
-}
-
-.hero-content h3 span{
-color:#f15a24;
-}
-
-.hero-content p{
-font-size:22px;
-line-height:1.6;
-margin-bottom:35px;
-max-width:560px;
+.nav .active {
+  border-bottom: 4px solid #f15a24;
+  padding-bottom: 10px;
 }
 
-.hero-buttons{
-display:flex;
-gap:20px;
-margin-bottom:35px;
+.nav .quote {
+  border: 2px solid #f15a24;
+  color: #f15a24;
+  padding: 14px 20px;
 }
 
-.btn{
-padding:18px 35px;
-font-weight:800;
-text-transform:uppercase;
-font-size:15px;
-cursor:pointer;
-transition:.3s;
-text-decoration:none;
+.hero-text {
+  padding-left: 38px;
+  padding-top: 55px;
+  max-width: 650px;
 }
 
-.orange-btn{
-background:#f15a24;
-color:white;
+.hero-text h1 {
+  font-size: 78px;
+  line-height: 0.95;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
-.orange-btn:hover{
-background:#d94714;
+.orange {
+  color: #f15a24;
 }
 
-.outline-btn{
-border:2px solid white;
-color:white;
+.hero-text p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 22px;
+  max-width: 540px;
 }
 
-.outline-btn:hover{
-background:white;
-color:black;
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 32px;
 }
 
-.coverage{
-display:flex;
-align-items:center;
-gap:10px;
-font-size:18px;
-font-weight:700;
+.btn {
+  padding: 18px 34px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 15px;
 }
 
-.coverage i{
-color:#f15a24;
-font-size:24px;
+.btn-orange {
+  background: #f15a24;
+  color: white;
 }
-
-/* ---------------- SERVICES ---------------- */
 
-.services{
-padding:80px 50px;
-background:#f5f5f5;
-text-align:center;
+.btn-outline {
+  border: 2px solid white;
+  color: white;
 }
 
-.section-small{
-color:#f15a24;
-font-size:16px;
-font-weight:800;
-text-transform:uppercase;
-margin-bottom:10px;
+.location {
+  margin-top: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
-.section-title{
-font-size:46px;
-font-weight:900;
-text-transform:uppercase;
-line-height:1;
-margin-bottom:20px;
+.services {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 24px 32px 34px;
 }
 
-.section-description{
-max-width:900px;
-margin:auto;
-font-size:16px;
-line-height:1.7;
-margin-bottom:50px;
+.small-title {
+  color: #f15a24;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 15px;
 }
 
-.service-grid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:0;
-border-top:1px solid #ddd;
-border-left:1px solid #ddd;
+.services h2 {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
-.service-card{
-background:white;
-border-right:1px solid #ddd;
-border-bottom:1px solid #ddd;
-transition:.3s;
+.services-intro {
+  max-width: 850px;
+  margin: 10px auto 22px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-.service-card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
-.service-content{
-padding:25px 20px 15px;
-min-height:200px;
+.card {
+  background: white;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
-.service-icon{
-font-size:50px;
-color:#f15a24;
-margin-bottom:15px;
+.card-text {
+  padding: 18px 12px 10px;
+  min-height: 150px;
 }
 
-.service-card h4{
-font-size:22px;
-font-weight:800;
-margin-bottom:12px;
-text-transform:uppercase;
+.card .icon {
+  font-size: 38px;
+  color: #f15a24;
+  margin-bottom: 8px;
 }
 
-.service-card p{
-font-size:14px;
-line-height:1.6;
+.card h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 8px;
 }
 
-.service-card img{
-width:100%;
-height:170px;
-object-fit:cover;
-display:block;
+.card p {
+  font-size: 13px;
+  line-height: 1.35;
 }
 
-/* ---------------- WHY US ---------------- */
-
-.why-us{
-background:black;
-color:white;
-padding:70px 50px;
-text-align:center;
+.card img {
+  width: 100%;
+  height: 135px;
+  object-fit: cover;
+  display: block;
 }
 
-.why-us h2{
-font-size:44px;
-font-weight:900;
-text-transform:uppercase;
-margin-bottom:50px;
+.why {
+  background: #050505;
+  color: white;
+  text-align: center;
+  padding: 22px 40px 40px;
 }
 
-.why-grid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:30px;
+.why h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 28px;
 }
 
-.why-card{
-padding:0 25px;
-border-left:1px solid #f15a24;
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
-.why-card:first-child{
-border-left:none;
+.why-card {
+  padding: 0 24px;
+  border-left: 1px solid #f15a24;
 }
 
-.why-icon{
-font-size:45px;
-color:#f15a24;
-margin-bottom:20px;
+.why-card:first-child {
+  border-left: none;
 }
 
-.why-card h3{
-font-size:20px;
-font-weight:800;
-margin-bottom:12px;
-text-transform:uppercase;
+.why-icon {
+  font-size: 38px;
+  color: #f15a24;
+  margin-bottom: 12px;
 }
 
-.why-card p{
-font-size:14px;
-line-height:1.7;
-color:#ccc;
+.why-card h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
-
-/* ---------------- CTA ---------------- */
 
-.cta{
-padding:60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#f5f5f5;
-gap:30px;
+.why-card p {
+  color: #ccc;
+  font-size: 13px;
+  line-height: 1.45;
 }
 
-.cta h2{
-font-size:42px;
-font-weight:900;
-text-transform:uppercase;
-line-height:1;
+.cta {
+  background: #f4f4f4;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr .8fr;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 60px;
 }
 
-.cta h2 span{
-display:block;
-color:#f15a24;
-margin-top:10px;
+.cta h2 {
+  font-size: 28px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
-.cta p{
-font-size:22px;
-line-height:1.6;
-max-width:500px;
+.cta h2 span {
+  color: #f15a24;
+  display: block;
+  font-size: 34px;
 }
 
-/* ---------------- FOOTER ---------------- */
-
-footer{
-background:black;
-color:white;
-padding:60px;
-display:grid;
-grid-template-columns:1.2fr 1fr 1fr 1fr;
-gap:50px;
+.cta p {
+  font-size: 18px;
+  line-height: 1.5;
 }
 
-.footer-logo{
-display:flex;
-gap:20px;
-align-items:center;
-margin-bottom:25px;
+.small-logo {
+  width: 150px;
+  height: 85px;
+  border: 4px solid #111;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: -5px;
 }
 
-.footer-logo-box{
-width:80px;
-height:80px;
-border:3px solid white;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:38px;
-font-weight:900;
-letter-spacing:-4px;
+.small-logo span {
+  color: #f15a24;
 }
 
-.footer-logo-box span{
-color:#f15a24;
-font-size:32px;
-position:relative;
-top:-6px;
+.footer {
+  background: #050505;
+  color: white;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.1fr 1.1fr;
+  gap: 35px;
+  padding: 32px 50px 45px;
 }
 
-.footer-column h4{
-font-size:18px;
-margin-bottom:20px;
-text-transform:uppercase;
+.footer-col {
+  border-left: 1px solid #f15a24;
+  padding-left: 25px;
 }
 
-.footer-column ul{
-list-style:none;
+.footer-col:first-child {
+  border-left: none;
+  padding-left: 0;
 }
 
-.footer-column ul li{
-margin-bottom:12px;
-color:#ccc;
-font-size:14px;
+.footer h3,
+.footer h4 {
+  text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
-.footer-column p{
-font-size:14px;
-line-height:1.8;
-color:#ccc;
+.footer p,
+.footer li {
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.6;
 }
 
-.footer-bottom{
-background:#050505;
-padding:20px;
-text-align:center;
-color:#666;
-font-size:13px;
+.footer ul {
+  list-style: none;
+  columns: 2;
 }
-
-/* ---------------- MOBILE ---------------- */
 
-@media(max-width:1200px){
-
-.service-grid{
-grid-template-columns:repeat(2,1fr);
+.footer-logo {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 14px;
 }
 
-.why-grid{
-grid-template-columns:repeat(2,1fr);
+.footer-logo-box {
+  width: 78px;
+  height: 65px;
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -4px;
 }
 
-footer{
-grid-template-columns:1fr 1fr;
+.footer-logo-box span {
+  color: #f15a24;
 }
 
+.copy {
+  background: #050505;
+  color: #555;
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
 }
-
-@media(max-width:768px){
 
-nav{
-padding:25px;
-flex-direction:column;
-gap:30px;
-}
+@media (max-width: 1100px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.nav-links{
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
+  .nav {
+    flex-wrap: wrap;
+  }
 
-.hero-content{
-left:25px;
-right:25px;
-max-width:100%;
-}
+  .grid,
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.hero-content h3{
-font-size:52px;
+  .cta,
+  .footer {
+    grid-template-columns: 1fr;
+  }
 }
 
-.hero-content p{
-font-size:18px;
-}
+@media (max-width: 650px) {
+  .logo-area {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.hero-buttons{
-flex-direction:column;
-align-items:flex-start;
-}
+  .hero-text {
+    padding: 35px 24px;
+  }
 
-.service-grid{
-grid-template-columns:1fr;
-}
+  .hero-text h1 {
+    font-size: 48px;
+  }
 
-.why-grid{
-grid-template-columns:1fr;
-}
+  .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.why-card{
-border-left:none;
-border-top:1px solid #f15a24;
-padding-top:30px;
-}
+  .grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
 
-.cta{
-flex-direction:column;
-align-items:flex-start;
-}
+  .why-card {
+    border-left: none;
+    border-top: 1px solid #f15a24;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
 
-footer{
-grid-template-columns:1fr;
-padding:50px 30px;
-}
+  .services h2 {
+    font-size: 26px;
+  }
 
+  .footer {
+    padding: 30px;
+  }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-
 <section class="hero">
+  <header class="header">
+    <div class="logo-area">
+      <div class="logo">S<span>2</span>D</div>
+      <div class="brand">
+        <h1>SQUARED2</h1>
+        <h2>DEVELOPMENTS</h2>
+        <p>EXCELLENCE IN EVERY BUILD</p>
+      </div>
+    </div>
 
-<nav>
+    <nav class="nav">
+      <a href="#" class="active">Home</a>
+      <a href="#">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="quote">Get A Quote</a>
+    </nav>
+  </header>
 
-<div class="logo-wrap">
+  <div class="hero-text">
+    <h1>
+      Building &<br>
+      Drainage<br>
+      <span class="orange">Excellence<br>In Every Build</span>
+    </h1>
 
-<div class="logo-box">
-S<span>2</span>D
-</div>
+    <p>
+      Reliable building and drainage solutions for domestic and small-scale projects.
+      Built right, from the ground up.
+    </p>
 
-<div class="brand-text">
-<h1>SQUARED2</h1>
-<h2>DEVELOPMENTS</h2>
-<p>EXCELLENCE IN EVERY BUILD</p>
-</div>
+    <div class="buttons">
+      <a href="#services" class="btn btn-orange">Our Services</a>
+      <a href="#contact" class="btn btn-outline">Get A Quote</a>
+    </div>
 
-</div>
-
-<div class="nav-links">
-<a href="#" class="active">Home</a>
-<a href="#">About Us</a>
-<a href="#">Services</a>
-<a href="#">Projects</a>
-<a href="#">Contact</a>
-<a href="#" class="quote-btn">Get A Quote</a>
-</div>
-
-</nav>
-
-<div class="hero-content">
-
-<h3>
-BUILDING &<br>
-DRAINAGE<br>
-<span>EXCELLENCE<br>
-IN EVERY BUILD</span>
-</h3>
-
-<p>
-Reliable building and drainage solutions for domestic and small-scale projects.
-Built right, from the ground up.
-</p>
-
-<div class="hero-buttons">
-<a href="#" class="btn orange-btn">Our Services</a>
-<a href="#" class="btn outline-btn">Get A Quote</a>
-</div>
-
-<div class="coverage">
-📍 COVERING THE EAST MIDLANDS
-</div>
-
-</div>
-
+    <div class="location">
+      <span class="orange">●</span> Covering the East Midlands
+    </div>
+  </div>
 </section>
 
-<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="small-title">Our Services</div>
+  <h2>Complete Building & Groundworks Solutions</h2>
 
-<section class="services">
+  <p class="services-intro">
+    From groundwork to the finishing touches, we offer a complete range of building and drainage services
+    to bring your project to life – on time, on budget and to the highest standard.
+  </p>
 
-<div class="section-small">OUR SERVICES</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-text">
+        <div class="icon">🚜</div>
+        <h3>Groundworks</h3>
+        <p>Excavation, site clearance, foundations and all aspects of groundwork.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=90" alt="Groundworks">
+    </div>
 
-<h2 class="section-title">
-COMPLETE BUILDING & GROUNDWORKS SOLUTIONS
-</h2>
+    <div class="card">
+      <div class="card-text">
+        <div class="icon">🟧</div>
+        <h3>Drainage</h3>
+        <p>Foul & surface water drainage, soakaways, gullies and drainage installation.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=90" alt="Drainage">
+    </div>
 
-<p class="section-description">
-From groundwork to the finishing touches, we offer a complete range of building and drainage services
-to bring your project to life – on time, on budget and to the highest standard.
-</p>
+    <div class="card">
+      <div class="card-text">
+        <div class="icon">🧱</div>
+        <h3>Foundations</h3>
+        <p>Strip foundations, pad foundations and concrete base installations.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=90" alt="Foundations">
+    </div>
 
-<div class="service-grid">
+    <div class="card">
+      <div class="card-text">
+        <div class="icon">🏡</div>
+        <h3>Extensions</h3>
+        <p>House extensions built to suit your needs and add value to your home.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=90" alt="English house extension">
+    </div>
 
-<div class="service-card">
-<div class="service-content">
-<div class="service-icon">🚜</div>
-<h4>Groundworks</h4>
-<p>Excavation, site clearance, foundations and all aspects of groundwork.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop">
-</div>
+    <div class="card">
+      <div class="card-text">
+        <div class="icon">🧱</div>
+        <h3>Building Works</h3>
+        <p>Brickwork, blockwork and general building works big or small.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=90" alt="Building works">
+    </div>
 
-<div class="service-card">
-<div class="service-content">
-<div class="service-icon">🛠</div>
-<h4>Drainage</h4>
-<p>Foul & surface water drainage, soakaways, gullies and drainage installation.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1605146768851-eda79da39897?q=80&w=1200&auto=format&fit=crop">
-</div>
+    <div class="card">
+      <div class="card-text">
+        <div class="icon">⬚</div>
+        <h3>Patios & Paving</h3>
+        <p>Patios, pathways and paving to enhance your outdoor space.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=900&q=90" alt="Patios and paving">
+    </div>
 
-<div class="service-card">
-<div class="service-content">
-<div class="service-icon">🏗</div>
-<h4>Foundations</h4>
-<p>Strip foundations, pad foundations and concrete base installations.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop">
-</div>
+    <div class="card">
+      <div class="card-text">
+        <div class="icon">▤</div>
+        <h3>Driveways</h3>
+        <p>Driveways in block paving, tarmac, gravel and concrete.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=90" alt="Driveway">
+    </div>
 
-<div class="service-card">
-<div class="service-content">
-<div class="service-icon">🏡</div>
-<h4>Extensions</h4>
-<p>House extensions built to suit your needs and add value to your home.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1200&auto=format&fit=crop">
-</div>
+    <div class="card">
+      <div class="card-text">
+        <div class="icon">⬛</div>
+        <h3>Concrete Works</h3>
+        <p>Concrete bases, floors, slabs, shed bases and retaining walls.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=900&q=90" alt="Concrete works">
+    </div>
 
-<div class="service-card">
-<div class="service-content">
-<div class="service-icon">🧱</div>
-<h4>Building Works</h4>
-<p>Brickwork, blockwork and general building works big or small.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop">
-</div>
+    <div class="card">
+      <div class="card-text">
+        <div class="icon">▥</div>
+        <h3>Fencing</h3>
+        <p>Timber fencing installed for privacy, security and kerb appeal.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=900&q=90" alt="Fencing">
+    </div>
 
-<div class="service-card">
-<div class="service-content">
-<div class="service-icon">🪨</div>
-<h4>Patios & Paving</h4>
-<p>Patios, pathways and paving to enhance your outdoor space.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
-</div>
-
-<div class="service-card">
-<div class="service-content">
-<div class="service-icon">🛣</div>
-<h4>Driveways</h4>
-<p>Driveways in block paving, tarmac, gravel and concrete.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?q=80&w=1200&auto=format&fit=crop">
-</div>
-
-<div class="service-card">
-<div class="service-content">
-<div class="service-icon">⬜</div>
-<h4>Concrete Works</h4>
-<p>Concrete bases, floors, slabs, shed bases and retaining walls.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?q=80&w=1200&auto=format&fit=crop">
-</div>
-
-<div class="service-card">
-<div class="service-content">
-<div class="service-icon">🪵</div>
-<h4>Fencing</h4>
-<p>Timber fencing installed for privacy, security and kerb appeal.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1599423300746-b62533397364?q=80&w=1200&auto=format&fit=crop">
-</div>
-
-<div class="service-card">
-<div class="service-content">
-<div class="service-icon">🌿</div>
-<h4>Landscaping</h4>
-<p>Turfing, borders, steps, retaining walls and garden transformations.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1200&auto=format&fit=crop">
-</div>
-
-</div>
-
+    <div class="card">
+      <div class="card-text">
+        <div class="icon">🌿</div>
+        <h3>Landscaping</h3>
+        <p>Turfing, borders, steps, retaining walls and garden transformations.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=900&q=90" alt="Landscaping">
+    </div>
+  </div>
 </section>
 
-<!-- WHY US -->
+<section class="why">
+  <div class="small-title">Why Choose Us</div>
+  <h2>Reliable. Professional. Local.</h2>
 
-<section class="why-us">
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">👥</div>
+      <h3>Small Team<br>Big Standards</h3>
+      <p>A dedicated team that takes pride in every job.</p>
+    </div>
 
-<div class="section-small">WHY CHOOSE US</div>
+    <div class="why-card">
+      <div class="why-icon">⚙️</div>
+      <h3>Quality<br>Workmanship</h3>
+      <p>High standards in everything we do, every time.</p>
+    </div>
 
-<h2>Reliable. Professional. Local.</h2>
+    <div class="why-card">
+      <div class="why-icon">🤝</div>
+      <h3>Honest Advice<br>Clear Pricing</h3>
+      <p>No hidden costs, just honest advice and clear quotes.</p>
+    </div>
 
-<div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🦺</div>
+      <h3>Clean, Tidy<br>& Respectful</h3>
+      <p>We treat your home and property with respect.</p>
+    </div>
 
-<div class="why-card">
-<div class="why-icon">👥</div>
-<h3>Small Team Big Standards</h3>
-<p>A dedicated team that takes pride in every job.</p>
-</div>
-
-<div class="why-card">
-<div class="why-icon">⚙️</div>
-<h3>Quality Workmanship</h3>
-<p>High standards in everything we do, every time.</p>
-</div>
-
-<div class="why-card">
-<div class="why-icon">🤝</div>
-<h3>Honest Advice Clear Pricing</h3>
-<p>No hidden costs, just honest advice and clear quotes.</p>
-</div>
-
-<div class="why-card">
-<div class="why-icon">🦺</div>
-<h3>Clean, Tidy & Respectful</h3>
-<p>We treat your home and property with respect.</p>
-</div>
-
-<div class="why-card">
-<div class="why-icon">🏠</div>
-<h3>Local & Trusted</h3>
-<p>Proudly serving homeowners in your area.</p>
-</div>
-
-</div>
-
+    <div class="why-card">
+      <div class="why-icon">🏠</div>
+      <h3>Local & Trusted</h3>
+      <p>Proudly serving homeowners in your area.</p>
+    </div>
+  </div>
 </section>
-
-<!-- CTA -->
 
 <section class="cta">
+  <h2>
+    Got a project in mind?
+    <span>Let’s get it built.</span>
+  </h2>
 
-<div>
-<h2>
-GOT A PROJECT IN MIND?
-<span>LET’S GET IT BUILT.</span>
-</h2>
-</div>
+  <p>Get in touch today for a free, no obligation quote.</p>
 
-<p>
-Get in touch today for a free,
-no obligation quote.
-</p>
+  <a href="#contact" class="btn btn-orange">Get In Touch</a>
 
-<a href="#" class="btn orange-btn">
-GET IN TOUCH
-</a>
-
+  <div class="small-logo">S<span>2</span>D</div>
 </section>
 
-<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="footer-col">
+    <div class="footer-logo">
+      <div class="footer-logo-box">S<span>2</span>D</div>
+      <div>
+        <h3>SQUARED2 DEVELOPMENTS</h3>
+        <p class="orange">EXCELLENCE IN EVERY BUILD</p>
+      </div>
+    </div>
+    <p>Follow us for recent projects, updates and completed work.</p>
+  </div>
 
-<footer>
+  <div class="footer-col">
+    <h4>Services</h4>
+    <ul>
+      <li>Groundworks</li>
+      <li>Drainage</li>
+      <li>Foundations</li>
+      <li>Extensions</li>
+      <li>Building Works</li>
+      <li>Patios & Paving</li>
+      <li>Driveways</li>
+      <li>Fencing</li>
+      <li>Landscaping</li>
+      <li>Concrete Works</li>
+    </ul>
+  </div>
 
-<div class="footer-column">
+  <div class="footer-col">
+    <h4>Contact</h4>
+    <p>📞 +44 7742 834723</p>
+    <p>✉️ squared2developments@gmail.com</p>
+    <p>📍 Covering the East Midlands</p>
+  </div>
 
-<div class="footer-logo">
-
-<div class="footer-logo-box">
-S<span>2</span>D
-</div>
-
-<div>
-<h3>SQUARED2 DEVELOPMENTS</h3>
-<p style="color:#f15a24;margin-top:8px;font-weight:700;">
-EXCELLENCE IN EVERY BUILD
-</p>
-</div>
-
-</div>
-
-<p>
-Follow us on social media for recent projects and updates.
-</p>
-
-</div>
-
-<div class="footer-column">
-<h4>Services</h4>
-
-<ul>
-<li>Groundworks</li>
-<li>Foundations</li>
-<li>Drainage</li>
-<li>Extensions</li>
-<li>Building Works</li>
-<li>Patios & Paving</li>
-<li>Driveways</li>
-<li>Fencing</li>
-<li>Landscaping</li>
-</ul>
-
-</div>
-
-<div class="footer-column">
-
-<h4>Contact</h4>
-
-<p>📞 +44 7742 834723</p>
-<p>✉ squared2developments@gmail.com</p>
-<p>📍 Covering the East Midlands</p>
-
-</div>
-
-<div class="footer-column">
-
-<h4>Areas We Cover</h4>
-
-<p>
-Proudly serving homeowners and small projects across the East Midlands.
-</p>
-
-</div>
-
+  <div class="footer-col">
+    <h4>Areas We Cover</h4>
+    <p>Proudly serving homeowners and small projects across the East Midlands.</p>
+  </div>
 </footer>
 
-<div class="footer-bottom">
-© 2024 Squared2 Developments. All rights reserved.
+<div class="copy">
+  © 2024 Squared2 Developments. All rights reserved.
 </div>
 
 </body>
